@@ -1,10 +1,10 @@
-# vmware-usb-osx
+# vmware-usb-macos
 
 This repo is a fork of [cbednarski/vmware-usb-osx](https://github.com/cbednarski/vmware-usb-osx) with slight tweaks to the `Makefile` and `README.md`.
 
-For the most part my homelab is made up of Apple Mac-minis (6,2 & 8,1) and Mac Pro Cheese Graters (5,1) because they're easy to come by, cheap, low maintenance, and run ESXi well.
+For the most part my homelab is made up of Apple Mac-minis and Mac Pro Cheese Graters as they're easy to come by, cheap, low maintenance, and run ESXi quite well.
 
-* This `Makefile` helps in creating a bootable USB installer for VMware ESXi on MacOS.
+* This `Makefile` creates a bootable USB installer for VMware ESXi on MacOS.
 
 ## vSphere Hypervisor version
 
@@ -25,4 +25,4 @@ VMware vSphere Hypervisor is proprietary software, however VMware offers a free 
 5. Run `make devices` and you'll see the new device for your USB stick.
 6. Note the disk number for your USB stick. It will be something like `/dev/disk2`. The only part you care about is **2** (or **3**, or **4**, or whatever it is). Use this number in the next step.
 7. Run `make vmware DISK=2`, this will format and copy ISO installer content to the USB stick. This could take a couple minutes to complete and will prompt for your password.
-8. Pop the USB stick into the computer you want to install ESXi on, restart and follow instructions.
+8. Pop the USB stick into the computer you want to install ESXi on, press and hold the Option key as you restart, select the USB installer and follow instructions.
